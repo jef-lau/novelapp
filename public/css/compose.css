@@ -1,0 +1,81 @@
+.example-class-selector {
+    margin-top: 2em;
+}
+
+.example-class-selector p {
+    /* Colors are in hexadecimal: http://www.colorpicker.com/ */    
+    color: #CC00AA;
+}
+
+body {
+     padding: 20px;
+     padding-bottom: 120px;
+}
+
+.jumbotron {
+    position: relative;
+    background: none;
+}
+
+.jumbotron:after {
+     content:"";
+     /*background: url("http://lorempixel.com/1140/283");*/
+     opacity: 0.2;
+     top: 0;
+     left: 0;
+     bottom: 0;
+     right: 0;
+     position: absolute;
+     z-index: -1;   
+}
+
+.project {
+    width: 80%;
+    margin: 0 auto; 
+}
+
+.intro {
+    padding-top: 50px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.quote {
+    width: 50%;
+    margin: 0 auto;
+}
+
+
+.intro p {
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.writer {
+    width: 575px;
+    height: 400px;
+}
+
+.disclaimer {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.prompt {
+    padding-top: 20px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.submission {
+    padding-top: 40px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.penname {
+    position: relative;
+    padding-left: 400px;
+    width: 50%;
+    margin: 0 auto;
+}

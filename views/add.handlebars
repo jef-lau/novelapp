@@ -6,10 +6,17 @@
 	<title>My HCI Friends</title>	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="/css/bootstrap.css">
+	<!--<link rel="stylesheet" href="/css/bootstrap.css">
 	<link rel="stylesheet" href="/css/bootstrap-theme.css">
-	<link rel="stylesheet" href="/css/hci-friends.css">
+	<link rel="stylesheet" href="/css/hci-friends.css">-->
 
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="/css/compose.css" rel="stylesheet">
+	<link href="/css/pilcrow.css" rel="stylesheet">
+	<link href="/css/novelapp.css" rel="stylesheet">
+	<link href="/css/font-awesome.css" rel="stylesheet">
+	<link href="/css/font-awesome.min.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -20,31 +27,105 @@
 
 <body>
 
-	<h1>My HCI Friends</h1>
-	{{#each friends}}
-	<div class = "friends">
-		<img src = "{{imageURL}}" class="img-responsive">
-		<h3><a href="#" class = "name">{{name}}</a></h3>
-		<p>{{description}}</p>
+	<div class="container">
+
+		<div class="title">
+			<center>
+				<a href="./index.html" id="link"><h1>Pilcrow</h1></a>
+				<p>crowdsourced story builder</p>
+
+				<i class="fa fa-question-circle fa-2x"data-toggle="collapse" data-target="#expand" id="hand"></i>
+
+				<div id="expand" class="collapse">
+					The first pilcrow that reaches 10 likes will be set into the final storyline. Once a pilcrow is set, the following pilcrows will continue where it left off.
+				</div>	
+
+<!-- 				<i class="fa fa-question-circle"data-toggle="collapse" data-target="#expand" id="hand"></i>
+
+				<div id="expand" class="collapse">
+					The first pilcrow that reaches 10 likes will be set into the finalized storyline. Once a pilcrow is set, the next paragraph will continue where it left off.
+				</div>	 -->				
+			</center>
+		</div>
+
+		<div class="intro">
+			<h4>Prompt:</h4>
+			<div class="thumbnail" id="explain">
+				Jennifer Lawrence and Chris Pratt are drugged and kidnapped by an evil mastermind named Louis. They are locked in a small room in the basement of Louis's home.
+			</div>
+			<p style="font-style: italic"> While freedom of expression and creativity is highly valued, we ask that you do not submit materials that are extremely inappropriate, offensive or potentially harmful to others.</p><br/>
+
+			<div class="form-group">
+			  <label for="comment">Write:</label>
+			  <textarea class="form-control" rows="5" id="comment"></textarea>
+			</div>
+			<div class="form-group">
+			  <label for="usr">Pen Name: 
+			  <i class="fa fa-question-circle"data-toggle="collapse" data-target="#pen-expand" id="hand"></i>
+			  	<div id="pen-expand" class="collapse" style="font-weight:normal;padding-left: 15px;">
+					Your pen name will remain anonymous until a pilcrow reaches 10 likes.
+				</div>	
+			  </label>
+			  <input type="text" class="form-control" id="usr">
+			</div>	
+
+			<!-- Trigger the modal with a button -->
+		<form id="addFriendForm" role="form" method="get" action="/confirmation">
+			<button type="submit" class="btn btn-default" data-toggle="modal" data-target="#myModal" id="myBtn">Submit</button>
+		</form>
+
+			<!-- Modal -->
+			<div id="myModal" class="modal fade" role="dialog">
+			  <div class="modal-dialog">
+
+			    <!-- Modal content-->
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal">&times;</button>
+			        <h4 class="modal-title">Are you sure?</h4>
+			      </div>
+			      <div class="modal-body">
+			        <p>Once your pilcrow is submitted, you can't edit it anymore.</p>
+			      </div>
+			      <div class="modal-footer">
+			      	<form id="addFriendForm" role="form" method="get" action="/confirmation">
+			        <button type="button" class="btn btn-danger" data-dismiss="modal">No! One more thing!</button>
+			        <button type="submit" class="btn btn-default">I'm so ready!</button>
+			    </form>
+			      </div>
+			    </div>
+
+			  </div>
+			</div>			
+
+			<a href="/confirmation.html" title="Are you sure?" data-toggle="popover" data-trigger="hover" data-content="All entries are final.">
+				
+			</a>
+
+
+
+
+					
+		</div>
 	</div>
-	<hr/>
-	{{/each}}
-	<p>New Friend Added</p>
-	<form id="addFriendForm" role="form" method="get" action="/add">
-		<h3>Add a friend</h3>
-	    <div class="form-group">
-	      <label for="name">Name:</label>
-	      <input type="text" class="form-control" id="name" placeholder="Name" name="name">
-	    </div>
-	    <div class="form-group">
-	      <label for="description">Description:</label>
-	      <input type="text" class="form-control" id="description" placeholder="Description" name="description">
-	    </div>
-	    <input type="submit" id="submitBtn" class="btn btn-default" value="Add the friend"></input>
-	</form>
-	<script src="/js/jquery-1.11.0.js"></script>
-	<script src="/js/hci-friends.js"></script>
-	<script src="/js/bootstrap.js"></script>
-</div>
+
+
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script>
+
+		var data = require("../data.json");
+
+		$(document).ready(function(){
+		    $('[data-toggle="popover"]').popover(); 
+		});
+
+		$("#myBtn").click(function(){
+			var name = {
+				"name" : $("#usr").val()
+			};
+			data["friends"].push(name);
+		});
+	</script>
 </body>
 </html>
