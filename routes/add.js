@@ -22,5 +22,10 @@ exports.addParagraph= function(req, res) { 
 		"imageURL":"http://lorempixel.com/500/500/people"
 	}
 	data["friends"].push(newFriend);*/
+	var name = req.query.paragraph;
+	var newFriend = {
+		"name": name
+	}
+	data["friends"].push(newFriend);
 	res.render('confirmation', data);
  }

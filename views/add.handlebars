@@ -12,7 +12,9 @@
 
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="/css/compose.css" rel="stylesheet">
 	<link href="/css/pilcrow.css" rel="stylesheet">
+	<link href="/css/novelapp.css" rel="stylesheet">
 	<link href="/css/font-awesome.css" rel="stylesheet">
 	<link href="/css/font-awesome.min.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -49,13 +51,15 @@
 		<div class="intro">
 			<h4>Prompt:</h4>
 			<div class="thumbnail" id="explain">
-				A day before the Earth is destroyed by a collision with a rouge planet, time freezes. You, a completely normal person are untouched and cannot die. Text on your arm appears that reads, "however long it takes, save us".
+				Jennifer Lawrence and Chris Pratt are drugged and kidnapped by an evil mastermind named Louis. They are locked in a small room in the basement of Louis's home.
 			</div>
 			<p style="font-style: italic"> While freedom of expression and creativity is highly valued, we ask that you do not submit materials that are extremely inappropriate, offensive or potentially harmful to others.</p><br/>
-
+<form id="addFriendForm" role="form" method="get" action="/confirmation">
 			<div class="form-group">
 			  <label for="comment">Write:</label>
-			  <textarea class="form-control" rows="5" id="comment"></textarea>
+
+			  <!-- paragraph to json-->
+			  <textarea class="form-control" rows="5" id="comment" name="paragraph"></textarea>
 			</div>
 			<div class="form-group">
 			  <label for="usr">Pen Name: 
@@ -64,14 +68,15 @@
 					Your pen name will remain anonymous until a pilcrow reaches 10 likes.
 				</div>	
 			  </label>
-			  <input type="text" class="form-control" id="usr">
+			  
+			  <!-- pen name to json-->	
+			  <input type="text" class="form-control" id="usr" name="usr">
 			</div>	
 
 			<!-- Trigger the modal with a button -->
-
-		<form id="addFriendForm" role="form" method="get" action="/confirmation">
+		<!--<form id="addFriendForm" role="form" method="get" action="/confirmation">-->
 			<button type="submit" class="btn btn-default" data-toggle="modal" data-target="#myModal" id="myBtn">Submit</button>
-		</form>
+		<!--</form>-->
 
 			<!-- Modal -->
 			<div id="myModal" class="modal fade" role="dialog">
@@ -87,16 +92,16 @@
 			        <p>Once your pilcrow is submitted, you can't edit it anymore.</p>
 			      </div>
 			      <div class="modal-footer">
-			      	<form id="addFriendForm" role="form" method="get" action="/confirmation">
+			      	<!--<form id="addFriendForm" role="form" method="get" action="/confirmation">-->
 			        <button type="button" class="btn btn-danger" data-dismiss="modal">No! One more thing!</button>
 			        <button type="submit" class="btn btn-default">I'm so ready!</button>
-			    </form>
+			    <!--</form>-->
 			      </div>
 			    </div>
 
 			  </div>
 			</div>			
-
+</form>
 			<a href="/confirmation.html" title="Are you sure?" data-toggle="popover" data-trigger="hover" data-content="All entries are final.">
 				
 			</a>
