@@ -53,18 +53,44 @@
 					<i>Prompt courtesy of <a href="https://www.reddit.com/r/WritingPrompts/comments/3pyg3h/wp_a_day_before_the_earth_is_destroyed_by_a/" target="_blank">r/WritingPrompts</a></i>
 				</div>
 			</div>
+
+			<center><button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Vote for <i class="fa fa-paragraph"></i> 1</button></center><br/>
+
+			<!-- Modal to vote -->
+			<div id="myModal" class="modal fade" role="dialog">
+			  <div class="modal-dialog">
+
+			    <!-- Modal content-->
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal">&times;</button>
+			        <h4 class="modal-title">Open Ballot: <i class="fa fa-paragraph"></i> 1</h4>
+			      </div>
+			      <div class="modal-body">
+			      <!-- display list of pilcrows -->
+			      <center><p style="font-style: italic">Ballot will close once a pilcrow reaches 10 likes. To hinder bias, likes and author's name will remain hidden until ballot closes.</p></center>
+			        <p>
+						{{#each friends}}
+							<div class="thumbnail" id="explain">{{name}}</div>
+						{{/each}}			        	
+			        </p>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-default" data-dismiss="modal">Done</button>
+			      </div>
+			    </div>
+
+			  </div>
+			</div>
+
+
+			<!-- write button -->
 			<center>
 
 				<form id="addFriendForm" role="form" method="get" action="/add">
 					<button type="submit" class="btn btn-default">Write <i class="fa fa-paragraph"></i> 1</button>
 				</form>
 			</center>
-
-	{{#each friends}}
-	
-		<p>{{name}}</p>
-
-	{{/each}}
 	
 		</div>
 
@@ -73,6 +99,7 @@
 
 
 	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="/js/pilcrow.js"></script>
 	<!-- Include all compiled plugins (blelow), or include individual files as needed -->
 	<script src="/js/bootstrap.min.js"></script>
 </body>

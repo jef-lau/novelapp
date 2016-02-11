@@ -1,5 +1,3 @@
-var data = require("../data.json");
-
 exports.addFriend = function(req, res) {    
 	// Your code goes here
 	/*console.log(data);
@@ -29,3 +27,9 @@ exports.addParagraph= function(req, res) { 
 	data["friends"].push(newFriend);
 	res.render('confirmation', data);
  }
+
+
+
+
+
+
