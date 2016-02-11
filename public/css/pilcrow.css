@@ -115,6 +115,18 @@ p {
     padding: 15px;
 }
 
+#vote {
+    padding: 15px;
+}
+
+#like {
+    padding-top: 15px;
+    display: inline-block;
+    float: right;
+
+}
+
+
 hr { 
     display: block;
     margin-top: 0.5em;
