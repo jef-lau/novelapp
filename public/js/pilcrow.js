@@ -1,5 +1,3 @@
-var data = require("/data.json");
-
 // count chracters
 $(document).ready(function() {
     var text_max = 1500;
