@@ -24,7 +24,8 @@ exports.addParagraph= function(req, res) { 
 	data["friends"].push(newFriend);*/
 	var name = req.query.paragraph;
 	var newFriend = {
-		"name": name
+		"name": name,
+		"votes": 0
 	}
 	data["friends"].push(newFriend);
 	res.render('confirmation', data);
