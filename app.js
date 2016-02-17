@@ -12,6 +12,7 @@ var index = require('./routes/index');
 var add = require('./routes/add');
 var confirmation = require('./routes/confirmation');
 var data = require('./routes/data');
+var pilk = require('./routes/pilk');
 // Example route
 // var user = require('./routes/user');
 
@@ -42,6 +43,7 @@ app.get('/', index.view);
 app.get('/add', add.addFriend);
 app.get('/confirmation',add.addParagraph);
 app.get('/data/:id', data.incrementVote);
+app.get('/pilk', pilk.crownVictor);
 // Example route
 // app.get('/users', user.list);
 

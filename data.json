@@ -1,4 +1,16 @@
 {
 	"friends": [
+		{
+			"name": "test1",
+			"votes": 0
+		},
+		{
+			"name": "test2",
+			"votes": 0
+		},
+		{
+			"name": "test3",
+			"votes": 0
+		}		
 	]
 }

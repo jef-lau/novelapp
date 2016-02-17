@@ -54,7 +54,23 @@
 				</div>
 			</div>
 
+			<!-- display the crowned pilcrows -->
+			<div>
+				{{#each crowned}}
+					<div class="thumbnail" style="overflow: hidden;">
+						<div id="vote">{{name}}</div>
+					</div>				
+				{{/each}}
+			</div>
+
+
 			<center><button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Vote!</button></center><br/>
+
+
+			<!-- test button -->
+			<form id="test" role="form" method="get" action="/pilk">
+				<button type="submit" class="btn btn-primary btn-lg">test</button>
+			</form>			
 
 			<!-- Modal to vote -->
 			<div id="myModal" class="modal fade" role="dialog">
