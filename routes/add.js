@@ -23,13 +23,25 @@ exports.addParagraph= function(req, res) { 
 	}
 	data["friends"].push(newFriend);*/
 	var name = req.query.paragraph;
+	var friends = data['friends'];
+	var id = count(friends);
 	var newFriend = {
+		"id": id,
 		"name": name,
 		"votes": 0
 	}
 	data["friends"].push(newFriend);
+	console.log(data["friends"]);
 	res.render('confirmation', data);
  }
+
+function count(obj) {
+   var count=0;
+   for(var prop in obj) {
+       count++;
+   }
+   return count;
+}
 
 
 

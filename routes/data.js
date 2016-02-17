@@ -3,8 +3,9 @@ var data = require('../data.json');
 
 exports.incrementVote = function(req, res){
 	//console.log(data);
+	var projectID = req.params.id;
 	var friends = data['friends'];
-	var person = friends[0];
+	var person = friends[projectID];
 	person['votes']++;
-	res.json(data);
+	res.json(person);
 };

@@ -14,7 +14,7 @@ function initializePage() {
 	/*$('.project a').click(function(e){
 		console.log($.get('/project/:idNumber', addProjectDetails));
 	});*/
-	$('#voteBtn').click(upVote);
+	$('.thumbnail button').click(upVote);
 }
 
 /*
@@ -39,8 +39,12 @@ function addProjectDetails(e) {
  * and apply it
  */
 function upVote(e) {
+	e.preventDefault();
+
+	var projectID = $(this).closest('.voteButton').attr('id');
 	console.log("User clicked on vote button");
-	$.get('/data/', voteCallBack);
+	console.log(projectID);
+	$.get('/data/'+projectID, voteCallBack);
 }
 
 function callBack(result){
@@ -62,10 +66,10 @@ function voteCallBack(result){
 	$('h1, h2, h3, h4, h5, h5').css('color', colors[2]);
 	$('p').css('color', colors[3]);
 	$('.project img').css('opacity', .75);*/
-	var friends = result['friends'];
-	var person = friends[0];
+	var votes = result['votes'];
+	//var person = friends[0];
 	//person['votes']++;
-	console.log(person['votes']);	
+	console.log(votes);	
 }
 
 
