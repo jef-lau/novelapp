@@ -46,6 +46,7 @@ app.get('/confirmation',add.addParagraph);
 app.get('/data/:id', data.incrementVote);
 app.get('/pilk', pilk.crownVictor);
 app.get('/vote', vote.view);
+app.get('/pilk/:id', pilk.crownVictor);
 // Example route
 // app.get('/users', user.list);
 

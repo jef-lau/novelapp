@@ -5,13 +5,18 @@ exports.crownVictor= function(req, res) { 
 	// Your code goes here
 	console.log(data);
 	var obj = data["friends"];
-	var winningID = 1;
+	var projectID = req.params.id;
+	var winningID = projectID;
 
 	var winner = {
 		"name": obj[winningID].name,
 		"vote": obj[winningID].vote
 	}
 	crown["crowned"].push(winner);	
-	res.render('', crown);	
+	console.log("before deleting data[friends] ="+data["friends"]);
+	data["friends"] = [];
+	console.log("after deleting data[friends] = "+data["friends"]);
+
+	res.json(data);
 
  }

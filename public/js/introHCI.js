@@ -42,11 +42,16 @@ function upVote(e) {
 	e.preventDefault();
 
 	var projectID = $(this).closest('.voteButton').attr('id');
-	console.log("User clicked on vote button");
-	console.log(projectID);
+	console.log("projectID = "+projectID);
 	$.get('/data/'+projectID, voteCallBack);
 }
 
+
+
+
+/* 
+ * call back functions
+ */
 function callBack(result){
 	console.log(result);
 	var id = "#"+"project"+result['id']+" .details";
@@ -58,19 +63,24 @@ function callBack(result){
 }
 
 function voteCallBack(result){
-	/*var array = result['colors'];
-	var colors = array['hex'];
-	console.log(colors);
-	$('body').css('background-color', colors[0]);
-	$('.thumbnail').css('background-color', colors[1]);
-	$('h1, h2, h3, h4, h5, h5').css('color', colors[2]);
-	$('p').css('color', colors[3]);
-	$('.project img').css('opacity', .75);*/
 	var votes = result['votes'];
-	//var person = friends[0];
-	//person['votes']++;
+	var id = result['id'];
 	console.log(votes);	
+	if (votes == 10) {
+		console.log("10 votes reached");
+		// call pilk
+		$.get('/pilk/'+id, tenCallBack);
+	} else {
+		console.log(id);
+	}	
 }
+
+function tenCallBack(result){
+
+
+}
+
+
 
 
 

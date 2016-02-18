@@ -33,8 +33,3 @@ function checkEmpty() {
 	}
 }
 
-
- if (jQuery.isEmptyObject(data))
-    {
-       console.log("Empty Object");
-    }
