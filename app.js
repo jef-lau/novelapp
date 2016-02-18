@@ -10,6 +10,7 @@ var handlebars = require('express3-handlebars')
 
 var index = require('./routes/index');
 var add = require('./routes/add');
+var vote = require('./routes/vote');
 var confirmation = require('./routes/confirmation');
 var data = require('./routes/data');
 var pilk = require('./routes/pilk');
@@ -44,6 +45,7 @@ app.get('/add', add.addFriend);
 app.get('/confirmation',add.addParagraph);
 app.get('/data/:id', data.incrementVote);
 app.get('/pilk', pilk.crownVictor);
+app.get('/vote', vote.view);
 // Example route
 // app.get('/users', user.list);
 

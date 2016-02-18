@@ -55,28 +55,28 @@
 			</div>
 
 			<!-- display the crowned pilcrows -->
-			<div>
-				{{#each crowned}}
+			<h4 class="modal-title">Open Ballot: <i class="fa fa-paragraph"></i> 1</h4>
+	      <center><p style="font-style: italic">Ballot will close once a pilcrow reaches 10 likes. To hinder bias, likes and author's name will remain hidden until ballot closes.</p></center>
+	        <p>
+				{{#each friends}}
 					<div class="thumbnail" style="overflow: hidden;">
-						<div id="vote">{{name}}</div>
-					</div>				
-				{{/each}}
-			</div>
+						<div id="vote">{{name}} {{id}}</div>
+						<div id="like" ><button type="button" class="voteButton" id="{{id}}"><i class="fa fa-heart"></i></button></div><br/>
+					</div>
+					
+				{{/each}}			        	
+	        </p>
 
-
-
-			<center>
-				<form id="voteButton" role="form" method="get" action="/vote">
-					<button type="submit" class="btn btn-primary btn-lg" >Vote!</button>
-				</form>
-			</center><br/>	
-
+			<!-- test button -->
+			<form id="test" role="form" method="get" action="/pilk">
+				<button type="submit" class="btn btn-primary btn-lg">test</button>
+			</form>			        
 
 			<!-- write button -->
 			<center>
 
-				<form id="addFriendForm" role="form" method="get" action="/add">
-					<button type="submit" class="btn btn-default">Write <i class="fa fa-paragraph"></i> 1</button>
+				<form id="returnhome" role="form" method="get" action="/">
+					<button type="submit" class="btn btn-default"><i class="fa fa-home fa-2x"></i></button>
 				</form>
 			</center>
 	
