@@ -43,6 +43,8 @@ function upVote(e) {
 
 	var projectID = $(this).closest('.voteButton').attr('id');
 	console.log("projectID = "+projectID);
+	
+	// TODO: display a modal saying "thanks for voting"
 	$.get('/data/'+projectID, voteCallBack);
 }
 
