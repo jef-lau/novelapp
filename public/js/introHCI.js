@@ -68,19 +68,19 @@ function voteCallBack(result){
 	console.log(votes);	
 	if (votes == 10) {
 		console.log("10 votes reached");
+
 		// call pilk
 		$.get('/pilk/'+id, tenCallBack);
 	} else {
-		console.log(id);
+
 	}	
 }
 
 function tenCallBack(result){
-
+	
+	window.location.href = "/pilcrow";
 
 }
-
-
 
 
 

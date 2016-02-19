@@ -1,9 +1,9 @@
 <!doctype html>
 
 <html>
-<!--<div class="container">-->
+<div class="container">
 <head>
-	<title>Pilcrow</title>	
+	<title>Pilcrow - Vote</title>	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!--<link rel="stylesheet" href="/css/bootstrap.css">
@@ -23,39 +23,17 @@
 </head>
 
 <body>
-
+	{{> simple_header}}
 	<div class="container">
 		<!-- h1 through h6 are headers. The higher the number, the smaller the header -->
 		<!-- p means paragraph -->
-		<div class="title">
-			<center>
-				<a href="/" id="link"><h1>Pilcrow</h1></a>
-				<p>crowdsourced story builder</p>
-
-				<i class="fa fa-question-circle fa-2x"data-toggle="collapse" data-target="#expand" id="hand"></i>
-
-				<div id="expand" class="collapse">
-					The first pilcrow that reaches 10 likes will be set into the final storyline. Once a pilcrow is set, the following pilcrows will continue where it left off.
-				</div>					
-			</center>
-		</div>
-			
-
 		<div class="intro">
 
-			<h4>Prompt:</h4>
-			<div class="thumbnail" id="explain">
-				A day before the Earth is destroyed by a collision with a rouge planet, time freezes. You, a completely normal person are untouched and cannot die. Text on your arm appears that reads, "however long it takes, save us".<br/>
-				<i class="fa fa-chevron-down"data-toggle="collapse" data-target="#note" id="hand"></i>
-
-				<div id="note" class="collapse">
-					<hr>
-					<i>Prompt courtesy of <a href="https://www.reddit.com/r/WritingPrompts/comments/3pyg3h/wp_a_day_before_the_earth_is_destroyed_by_a/" target="_blank">r/WritingPrompts</a></i>
-				</div>
-			</div>
 
 			<!-- display the crowned pilcrows -->
-			<h4 class="modal-title">Open Ballot: <i class="fa fa-paragraph"></i> 1</h4>
+			<h4 class="modal-title">Open Ballot for <i class="fa fa-paragraph"></i> {{pilcrowSize}}</h4>
+			{{> prompt}}
+
 	      <center><p style="font-style: italic">Ballot will close once a pilcrow reaches 10 likes. To hinder bias, likes and author's name will remain hidden until ballot closes.</p></center>
 	        <p>
 				{{#each friends}}
@@ -67,15 +45,7 @@
 				{{/each}}			        	
 	        </p>
 
-		        
-
-			<!-- write button -->
-			<center>
-
-				<form id="returnhome" role="form" method="get" action="/">
-					<button type="submit" class="btn btn-default"><i class="fa fa-home fa-2x"></i></button>
-				</form>
-			</center>
+		       
 	
 		</div>
 

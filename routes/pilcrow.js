@@ -9,9 +9,7 @@ exports.view = function(req, res){
 	crown["pilcrowSize"] = pilcrowsCount + 1;
 	console.log("pilcrowscount = "+pilcrowsCount);
 
-	// we need to fix this. we can only render 1 json at time
-	res.render('index', crown);
-	// res.render('index', data);
+	res.render('pilcrow', crown);
 };
 
 function count(obj) {

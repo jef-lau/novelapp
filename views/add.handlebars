@@ -12,9 +12,7 @@
 
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
-	<link href="/css/compose.css" rel="stylesheet">
 	<link href="/css/pilcrow.css" rel="stylesheet">
-	<link href="/css/novelapp.css" rel="stylesheet">
 	<link href="/css/font-awesome.css" rel="stylesheet">
 	<link href="/css/font-awesome.min.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -26,38 +24,17 @@
 </head>
 
 <body>
-
+{{> simple_header}}
 	<div class="container">
-
-		<div class="title">
-			<center>
-				<a href="/" id="link"><h1>Pilcrow</h1></a>
-				<p>crowdsourced story builder</p>
-
-				<i class="fa fa-question-circle fa-2x"data-toggle="collapse" data-target="#expand" id="hand"></i>
-
-				<div id="expand" class="collapse">
-					The first pilcrow that reaches 10 likes will be set into the final storyline. Once a pilcrow is set, the following pilcrows will continue where it left off.
-				</div>	
-
-<!-- 				<i class="fa fa-question-circle"data-toggle="collapse" data-target="#expand" id="hand"></i>
-
-				<div id="expand" class="collapse">
-					The first pilcrow that reaches 10 likes will be set into the finalized storyline. Once a pilcrow is set, the next paragraph will continue where it left off.
-				</div>	 -->				
-			</center>
-		</div>
 
 		<div class="intro">
 			<h4>Prompt:</h4>
 			<div class="thumbnail" id="explain">
 				A day before the Earth is destroyed by a collision with a rouge planet, time freezes. You, a completely normal person are untouched and cannot die. Text on your arm appears that reads, "however long it takes, save us".<br/>
-				<i class="fa fa-chevron-down"data-toggle="collapse" data-target="#note" id="hand"></i>
 
-				<div id="note" class="collapse">
-					<hr>
-					<i>Prompt courtesy of <a href="https://www.reddit.com/r/WritingPrompts/comments/3pyg3h/wp_a_day_before_the_earth_is_destroyed_by_a/" target="_blank">r/WritingPrompts</a></i>
-				</div>
+				<hr>
+				<i>Prompt courtesy of <a href="https://www.reddit.com/r/WritingPrompts/comments/3pyg3h/wp_a_day_before_the_earth_is_destroyed_by_a/" target="_blank">r/WritingPrompts</a></i>
+
 			</div>
 			<p style="font-style: italic"> While freedom of expression and creativity is highly valued, we ask that you do not submit materials that are extremely inappropriate, offensive or potentially harmful to others.</p><br/>
 
@@ -77,7 +54,7 @@
 			  <label for="usr">Pen Name: 
 			  <i class="fa fa-question-circle"data-toggle="collapse" data-target="#pen-expand" id="hand"></i>
 			  	<div id="pen-expand" class="collapse" style="font-weight:normal;padding-left: 15px;">
-					Your pen name will remain anonymous until a pilcrow reaches 10 likes.
+					Your pen name will remain anonymous, unless if your pilcrow gets set into the final storyline.
 				</div>	
 			  </label>
 			  

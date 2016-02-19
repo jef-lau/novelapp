@@ -1,16 +1,4 @@
 {
-	"crowned": [
-		{
-			"name": "hi1",
-			"votes": 0
-		},
-		{
-			"name": "hi2",
-			"votes": 0
-		},
-		{
-			"name": "hi3",
-			"votes": 0
-		}				
+	"crowned": [				
 	]
 }

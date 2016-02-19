@@ -14,6 +14,7 @@ var vote = require('./routes/vote');
 var confirmation = require('./routes/confirmation');
 var data = require('./routes/data');
 var pilk = require('./routes/pilk');
+var pilcrow = require('./routes/pilcrow');
 // Example route
 // var user = require('./routes/user');
 
@@ -47,6 +48,7 @@ app.get('/data/:id', data.incrementVote);
 app.get('/pilk', pilk.crownVictor);
 app.get('/vote', vote.view);
 app.get('/pilk/:id', pilk.crownVictor);
+app.get('/pilcrow', pilcrow.view);
 // Example route
 // app.get('/users', user.list);
 

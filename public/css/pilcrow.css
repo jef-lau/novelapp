@@ -16,7 +16,16 @@ body {
      padding-bottom: 120px;
 }
 
+
 .title h1 {
+  font-size: 71px;
+  font-weight: 500;
+  /*line-height: 2.1428571435;*/
+  color: inherit;
+  
+}
+
+.title h2 {
   font-size: 71px;
   font-weight: 500;
   /*line-height: 2.1428571435;*/
@@ -83,7 +92,7 @@ p {
 }
 
 .intro {
-    padding-top: 50px;
+    padding-top: 25px;
     max-width: 650px;
     margin: 0 auto;
 }
@@ -117,6 +126,8 @@ p {
 
 #vote {
     padding: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 #like {
@@ -138,3 +149,69 @@ hr {
 }
 
 html { margin:11px }
+
+
+.simplehead{
+    margin-top: -31px;
+    display: inline-block;
+    position: relative;
+}
+.simplehead h1 {
+    color:white;
+    font-size: 21px;
+    font-weight: 400;
+    position:relative;
+    z-index:2;
+    top:0px;
+    padding: 10px;
+    padding-top: 25px;
+}
+.simplehead img {
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:150px;
+    z-index:1;
+    padding-bottom: 25px;
+}
+
+.simplehead i {
+  padding-left: 33px;
+  padding-top:7px;
+  /*padding-right:25px;*/
+  color: #fff;
+  top:10px;
+  position:absolute;
+  z-index:1;
+}
+
+.homebookmark {
+    margin-top: -31px;
+    display: inline-block;
+    position: relative;
+}
+
+.homebookmark img {
+    /*position:absolute;*/
+    top:0px;
+    left:0px;
+    width:89px;
+    height:150px;
+    /*z-index:1;*/
+    padding-bottom: 25px;
+}
+
+.fixedButtons {
+  position: fixed; 
+  padding-bottom: 25px;
+  bottom: 0;
+  right: 100px;
+}
+
+.storyTitle {
+  text-align: center; 
+  padding: 25px;
+  font-family: 'Cedarville Cursive', cursive;
+  font-size: 24px;
+}
