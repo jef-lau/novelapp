@@ -31,14 +31,14 @@
 
 
 			<!-- display the crowned pilcrows -->
-			<h4 class="modal-title">Open Ballot for <i class="fa fa-paragraph"></i> {{pilcrowSize}}</h4>
+			<h2 class="modal-title" style="padding-top: 50px; padding-bottom: 15px">Open Ballot for <i class="fa fa-paragraph"></i> {{pilcrowSize}}</h2>
 			{{> prompt}}
 
-	      <center><p style="font-style: italic">Ballot will close once a pilcrow reaches 10 likes. To hinder bias, likes and author's name will remain hidden until ballot closes.</p></center>
+	      <center><p style="font-style: italic; padding-top: 25px">Ballot will close once a pilcrow reaches 10 likes. To hinder bias, likes and author's name will remain hidden until ballot closes.</p></center>
 	        <p>
 				{{#each friends}}
 					<div class="thumbnail" style="overflow: hidden;">
-						<div id="vote">{{name}} {{id}}</div>
+						<div id="vote">{{name}}</div>
 						<div id="like" ><button type="button" class="voteButton" id="{{id}}"><i class="fa fa-heart"></i></button></div><br/>
 					</div>
 					
