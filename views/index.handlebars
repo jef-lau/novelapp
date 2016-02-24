@@ -26,39 +26,22 @@
     <![endif]-->        
 </head>
 
+<footer>
+	<div class="fixedButtons">
 
-<!-- <div class="container">
-
-		<div class="buttons">
 			<form id="voteButton" role="form" method="get" action="/vote">
-				<center>Vote <i class="fa fa-paragraph"></i> {{pilcrowSize}}</center>
+				<button type="submit" class="btn btn-default btn-block"role="form" method="get" action="/vote" ><div style="padding-left:15px;padding-right:15px;">Vote <i class="fa fa-paragraph"></i> {{pilcrowSize}}</div></button>
 			</form>
-		</div>
 
-</div> -->
 
-<div class="row">
-	<div class="center-block">
-		<div class="fixedButtons">
-			<center>
-				<form id="voteButton" role="form" method="get" action="/vote">
-					<button type="submit" class="btn btn-default btn-block"role="form" method="get" action="/vote" >Vote <i class="fa fa-paragraph"></i> {{pilcrowSize}}</button>
-				</form>
-			</center>
+			<form id="addFriendForm" role="form" method="get" action="/add">
+				<button type="submit" class="btn btn-primary btn-block">
+					<div style="padding-left:15px;padding-right:15px;">Write <i class="fa fa-paragraph"></i> {{pilcrowSize}}</div>
+				</button>
+			</form>
 
-			<center style="padding-top: 5px">
-
-				<form id="addFriendForm" role="form" method="get" action="/add">
-					<button type="submit" class="btn btn-primary btn-block">
-						<div style="padding-left: 15px;padding-right: 15px;">
-							Write <i class="fa fa-paragraph"></i> {{pilcrowSize}}
-						</div>
-					</button>
-				</form>
-			</center>
-		</div>
 	</div>
-</div>
+</footer>
 
 <body>
 
