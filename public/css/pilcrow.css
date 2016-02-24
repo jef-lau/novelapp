@@ -232,7 +232,7 @@ html { margin:11px }
 }
 
 
-form {
+.inBlock {
   display: inline-block;
 }
 
