@@ -16,6 +16,8 @@
 	<link href="/css/font-awesome.min.css" rel="stylesheet">
 	<!--cursive title font-->
 	<link href='https://fonts.googleapis.com/css?family=Cedarville+Cursive' rel='stylesheet' type='text/css'>
+	<!--crowned pilcrow font-->
+	<link href='https://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -24,58 +26,75 @@
     <![endif]-->        
 </head>
 
+
+<!-- <div class="container">
+
+		<div class="buttons">
+			<form id="voteButton" role="form" method="get" action="/vote">
+				<center>Vote <i class="fa fa-paragraph"></i> {{pilcrowSize}}</center>
+			</form>
+		</div>
+
+</div> -->
+
+<div class="row">
+	<div class="center-block">
+		<div class="fixedButtons">
+			<center>
+				<form id="voteButton" role="form" method="get" action="/vote">
+					<button type="submit" class="btn btn-default btn-block"role="form" method="get" action="/vote" >Vote <i class="fa fa-paragraph"></i> {{pilcrowSize}}</button>
+				</form>
+			</center>
+
+			<center style="padding-top: 5px">
+
+				<form id="addFriendForm" role="form" method="get" action="/add">
+					<button type="submit" class="btn btn-primary btn-block">
+						<div style="padding-left: 15px;padding-right: 15px;">
+							Write <i class="fa fa-paragraph"></i> {{pilcrowSize}}
+						</div>
+					</button>
+				</form>
+			</center>
+		</div>
+	</div>
+</div>
+
 <body>
 
-			<div class="fixedButtons">
-				<center>
-					<form id="voteButton" role="form" method="get" action="/vote">
-						<button type="submit" class="btn btn-default btn-block"role="form" method="get" action="/vote" >Vote <i class="fa fa-paragraph"></i> {{pilcrowSize}}</button>
-					</form>
-				</center>
+			
 
-				<center style="padding-top: 5px">
 
-					<form id="addFriendForm" role="form" method="get" action="/add">
-						<button type="submit" class="btn btn-primary btn-block">
-							<div style="padding-left: 15px;padding-right: 15px;">
-								Write <i class="fa fa-paragraph"></i> {{pilcrowSize}}
-							</div>
-						</button>
-					</form>
-				</center>
-			</div>	
-
-	<div class="container">
+	<div>
 		<!-- h1 through h6 are headers. The higher the number, the smaller the header -->
 		<!-- p means paragraph -->
-		{{> header}}
+		<div class="container">
+		{{> header}}</div>
 			
 
 		<div class="intro">
 
-<!-- 			<h4>Prompt:</h4>
+			<h4>Prompt:</h4>
 			<div class="thumbnail" id="explain">
 				A day before the Earth is destroyed by a collision with a rouge planet, time freezes. You, a completely normal person are untouched and cannot die. Text on your arm appears that reads, "however long it takes, save us".<br/>
-				<i class="fa fa-chevron-down"data-toggle="collapse" data-target="#note" id="hand"></i>
+				<hr>
+				<i>Prompt courtesy of <a href="https://www.reddit.com/r/WritingPrompts/comments/3pyg3h/wp_a_day_before_the_earth_is_destroyed_by_a/" target="_blank">r/WritingPrompts</a></i>
 
-				<div id="note" class="collapse">
-					<hr>
-					<i>Prompt courtesy of <a href="https://www.reddit.com/r/WritingPrompts/comments/3pyg3h/wp_a_day_before_the_earth_is_destroyed_by_a/" target="_blank">r/WritingPrompts</a></i>
-				</div>
-			</div> -->
-
-			{{> prompt}}
-			<div class="storyTitle">
-				"however long it takes, save us"
 			</div>
+			<p>This is the story so far...</p>
+			<div class="paper">
+				<div class="storyTitle">
+					"however long it takes, save us"
+				</div>
 
-			<!-- display the crowned pilcrows -->
-			<div>
-				{{#each crowned}}
+				<!-- display the crowned pilcrows -->
+				<div style="padding-left: 10px">
+					{{#each crowned}}
 
-					<blockquote><div id="vote">{{name}}</div></blockquote>
-			
-				{{/each}}
+						<blockquote><div id="vote" class="crownedPilcrows">{{name}}</div></blockquote>
+				
+					{{/each}}
+				</div>
 			</div>
 	
 		</div>

@@ -23,8 +23,9 @@
 </head>
 
 <body>
-	{{> simple_header}}
-	<div class="container">
+	
+	<div>
+		{{> simple_header}}
 		<!-- h1 through h6 are headers. The higher the number, the smaller the header -->
 		<!-- p means paragraph -->
 		<div class="intro">
@@ -39,7 +40,34 @@
 				{{#each friends}}
 					<div class="thumbnail" style="overflow: hidden;">
 						<div id="vote">{{name}}</div>
-						<div id="like" ><button type="button" class="voteButton" id="{{id}}"><i class="fa fa-heart"></i></button></div><br/>
+						<div id="like" ><button type="button" class="voteButton" id="{{id}}" data-toggle="modal" data-target="#myModal"><i class="fa fa-heart"></i></button></div><br/>
+
+						<!-- Modal -->
+						<div id="myModal" class="modal fade" role="dialog">
+						  <div class="modal-dialog">
+
+						    <!-- Modal content-->
+						    <div class="modal-content">
+						      <div class="modal-header">
+						        <button type="button" class="close" data-dismiss="modal">&times;</button>
+						        <h4 class="modal-title" id="titleCheck">Vote Registered</h4>
+						      </div>
+						      <div class="modal-body">
+						        <p id="check">Thanks for voting! Please refrain from submitting another vote until the next pilcrow!</p>
+						      </div>
+						      <div class="modal-footer" id="replace">
+						      	<!--<form id="addFriendForm" role="form" method="get" action="/confirmation">-->
+						      	<div class="btn-group">
+									<button type="submit" class="btn btn-default" id="buttonCheck2" data-dismiss="modal">Close</button>
+						        </div>
+						        
+
+						    <!--</form>-->
+						      </div>
+						    </div>
+
+						  </div>
+						</div>							
 					</div>
 					
 				{{/each}}			        	

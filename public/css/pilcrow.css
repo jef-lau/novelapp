@@ -206,7 +206,10 @@ html { margin:11px }
   position: fixed; 
   padding-bottom: 25px;
   bottom: 0;
-  right: 100px;
+  right:0;
+  padding-right: 20%;
+  
+
 }
 
 .storyTitle {
@@ -214,4 +217,31 @@ html { margin:11px }
   padding: 25px;
   font-family: 'Cedarville Cursive', cursive;
   font-size: 24px;
+
+}
+
+.crownedPilcrows {
+  font-family: 'Goudy Bookletter 1911', serif;
+  font-size: 18px;
+}
+
+.paper {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border:1px solid #e5e5e5;
+  -webkit-box-shadow: 7px 7px 0px -2px rgba(184,184,184,0.54);
+  -moz-box-shadow: 7px 7px 0px -2px rgba(184,184,184,0.54);
+  box-shadow: 7px 7px 0px -2px rgba(184,184,184,0.54);
+}
+
+.buttons {
+  position: fixed; 
+  padding-bottom: 25px;
+  bottom: 0;
+
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border:1px solid #e5e5e5;
+  max-width: 500px;
+
 }
