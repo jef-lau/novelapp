@@ -10,7 +10,7 @@ exports.addFriend = function(req, res) { 
 		"imageURL":"http://lorempixel.com/500/500/people"
 	}
 	data["friends"].push(newFriend);*/
-	res.render('add', data);
+	res.render('add', crown);
  }
 
 exports.addParagraph= function(req, res) {    
@@ -42,10 +42,12 @@ exports.addParagraph= function(req, res) { 
 	data["friends"].push(newFriend);*/
 	var name = req.query.paragraph;
 	var friends = data['friends'];
+	var penname = req.query.usr;
 	var id = count(friends);
 	var newFriend = {
 		"id": id,
 		"name": name,
+		"penname": penname,
 		"votes": 0
 	}
 	data["friends"].push(newFriend);

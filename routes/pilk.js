@@ -10,7 +10,8 @@ exports.crownVictor= function(req, res) { 
 
 	var winner = {
 		"name": obj[winningID].name,
-		"vote": obj[winningID].vote
+		"vote": obj[winningID].vote,
+		"penname": obj[winningID].penname
 	}
 	crown["crowned"].push(winner);	
 	console.log("before deleting data[friends] ="+data["friends"]);
