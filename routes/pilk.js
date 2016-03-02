@@ -14,6 +14,8 @@ exports.crownVictor= function(req, res) { 
 		"penname": obj[winningID].penname
 	}
 	crown["crowned"].push(winner);	
+	crown["last"] = [];
+	crown["last"].push(winner);
 	console.log("before deleting data[friends] ="+data["friends"]);
 	data["friends"] = [];
 	console.log("after deleting data[friends] = "+data["friends"]);

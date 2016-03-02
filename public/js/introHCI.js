@@ -15,6 +15,7 @@ function initializePage() {
 		console.log($.get('/project/:idNumber', addProjectDetails));
 	});*/
 	$('.thumbnail button').click(upVote);
+	$('#helpButton').click(recordEvent);
 }
 
 /*
@@ -82,6 +83,11 @@ function tenCallBack(result){
 	
 	window.location.href = "/pilcrow";
 
+}
+
+
+function recordEvent(e){
+	ga("send", "event", help, click);
 }
 
 
