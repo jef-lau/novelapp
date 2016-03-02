@@ -87,7 +87,8 @@ function tenCallBack(result){
 
 
 function recordEvent(e){
-	ga("send", "event", help, click);
+	ga("send", "event", 'help', 'click');
+	console.log("button clicked");
 }
 
 
