@@ -12,7 +12,7 @@
 /* this style exists to make it obvious that you've successfully linked
    the CSS to the page. feel free to remove it once the link is working. */
 body {
-     padding: 20px;
+     /*padding: 20px;*/
      padding-bottom: 120px;
 }
 
@@ -162,7 +162,7 @@ html { margin:11px }
     font-weight: 400;
     position:relative;
     z-index:2;
-    top:0px;
+    top:16px;
     padding: 10px;
     padding-top: 25px;
 }
@@ -178,10 +178,10 @@ html { margin:11px }
 
 .simplehead i {
   padding-left: 33px;
-  padding-top:7px;
+
   /*padding-right:25px;*/
   color: #fff;
-  top:10px;
+  top:35px;
   position:absolute;
   z-index:1;
 }
@@ -238,7 +238,7 @@ html { margin:11px }
 
 footer {
   position: fixed;
-  margin-left: -30px;
+  margin-left: -11px;
   bottom: 0;
   width: 100%;
   height: 60px;
